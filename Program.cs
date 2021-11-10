@@ -12,7 +12,9 @@ namespace NetCoreConsole
         {
 
             // DelegadoSimples1();
-            DelegadoSimples2();
+            //DelegadoSimples2();
+
+            new Eventos().ExecutarEventos();
 
         }
 
