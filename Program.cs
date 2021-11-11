@@ -10,11 +10,43 @@ namespace NetCoreConsole
 
         public static void Main(string[] args)
         {
+            Console.Clear();
+            Console.WriteLine(" ");
+            Console.WriteLine(" ");
+            Console.WriteLine(" **** TESTES ****");
+            Console.WriteLine(" ");
+            Console.WriteLine(" ");
+            Console.WriteLine("1 - DelegadoSimples1..................");
+            Console.WriteLine("2 - DelegadoSimples2..................");
+            Console.WriteLine("3 - Testar Eventos....................");
+            Console.WriteLine("4 - Testar Delegate Action (Carro)....");
+            Console.WriteLine("5 - Testar padrão Observer (Bingo)....");
+            Console.WriteLine(" ");
+            Console.Write("Digite sua opçao: ");
+            var input = Console.ReadLine();
 
-            // DelegadoSimples1();
-            //DelegadoSimples2();
+            switch (input)
+            {
+                case "1":
+                    DelegadoSimples1();
+                    break;
+                case "2":
+                    DelegadoSimples2();
+                    break;
+                case "3":
+                    new Eventos().ExecutarEventos();
+                    break;
+                case "4":
+                    new DelegateCarro().IniciarCarro();
+                    break;
+                case "5":
+                    new PadraoObserver();
+                    break;
+                default:
+                    break;
+            }
 
-            new Eventos().ExecutarEventos();
+            Environment.Exit(0);
 
         }
 
